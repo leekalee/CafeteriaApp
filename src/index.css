@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cb-primary: #4D6A42;
+    --cb-primary-dark: #3B5332;
+    --cb-primary-soft: #EBF3E6;
+    --cb-accent: #E59838;
+    --cb-accent-soft: #FFF1DB;
+    --cb-bg: #F7F8F4;
+    --cb-surface: #FFFFFF;
+    --cb-border: #E5E9DF;
+    --cb-text: #1C261B;
+    --cb-muted: #5E6E5A;
+  }
+
+  html, body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #EBF1E6;
+    color: var(--cb-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbars inside horizontal pill scrollers & mobile frame while keeping scroll functional */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
